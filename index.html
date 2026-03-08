@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Self Development System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🌱 Become Your Ideal Self</h1>
+
+<section class="card">
+  <h2>✨ Who I Want To Become</h2>
+  <textarea id="identity" placeholder="Describe your ideal self..."></textarea>
+</section>
+
+<section class="card">
+  <h2>🎯 Goals</h2>
+  <input id="weeklyGoal" placeholder="Weekly Goal">
+  <input id="monthlyGoal" placeholder="Monthly Goal">
+  <input id="yearlyGoal" placeholder="Yearly Goal">
+</section>
+
+<section class="card">
+  <h2>📝 Daily Reflection</h2>
+  <textarea id="dailyLog" placeholder="What did you do today?"></textarea>
+
+  <label>How did you feel today?</label>
+  <select id="mood">
+    <option value="confused">😕 Confused</option>
+    <option value="lazy">😴 Lazy</option>
+    <option value="motivated">🔥 Motivated</option>
+    <option value="disciplined">🧘 Disciplined</option>
+    <option value="sad">😔 Sad</option>
+  </select>
+
+  <button onclick="saveDay()">Save Day</button>
+</section>
+
+<section class="card">
+  <h2>📈 Progress</h2>
+  <button onclick="addProgress('daily')">Daily Work (+2%)</button>
+  <button onclick="addProgress('weekly')">Weekly Goal Done (+15%)</button>
+  <button onclick="addProgress('monthly')">Monthly Goal Done (+30%)</button>
+
+  <div class="progress-bar">
+    <div id="progressFill"></div>
+  </div>
+  <p id="progressText">0% completed</p>
+  <p id="streakText">🔥 Streak: 0 days</p>
+</section>
+
+<section class="card">
+  <h2>🖼 Vision Board</h2>
+  <input type="file" accept="image/*" onchange="addImage(event)">
+  <div id="visionBoard"></div>
+</section>
+
+<section class="card quote">
+  <h2>📜 Bhagavad Gita Guidance</h2>
+  <p id="gitaQuote"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
